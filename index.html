@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#080a1a">
+<title>Yash Raj Singh – CSE Student · Cloud, Web & AI</title>
+<meta name="description" content="Portfolio of Yash Raj Singh, CSE student building cloud, web and AI projects.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=DM+Sans:wght@400;500&display=swap">
+<style>
+:root{--bg:#080a1a;--surface:#11143077;--solid:#12163a;--line:#2a2f63;--text:#eef0ff;--muted:#9aa0c8;--accent:#8b7cff;--accent2:#35e0c6;--hot:#ff6ba8;--glow:rgba(139,124,255,.22);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f7f5ff;--surface:#ffffffcc;--solid:#fff;--line:#ddd8f5;--text:#1a1740;--muted:#5d5a8a;--accent:#6a4cf0;--accent2:#0a9f8a;--hot:#d6336c;--glow:rgba(106,76,240,.14)}}
+:root[data-theme="light"]{--bg:#f7f5ff;--surface:#ffffffcc;--solid:#fff;--line:#ddd8f5;--text:#1a1740;--muted:#5d5a8a;--accent:#6a4cf0;--accent2:#0a9f8a;--hot:#d6336c;--glow:rgba(106,76,240,.14)}
+:root[data-theme="dark"]{--bg:#080a1a;--surface:#11143077;--solid:#12163a;--line:#2a2f63;--text:#eef0ff;--muted:#9aa0c8;--accent:#8b7cff;--accent2:#35e0c6;--hot:#ff6ba8;--glow:rgba(139,124,255,.22)}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:radial-gradient(900px 500px at 85% -5%,rgba(139,124,255,.22),transparent 60%),radial-gradient(700px 500px at -5% 35%,rgba(53,224,198,.12),transparent 60%),radial-gradient(800px 500px at 100% 80%,rgba(255,107,168,.12),transparent 60%),var(--bg);background-attachment:fixed;color:var(--text);font:400 1rem/1.65 'DM Sans',system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:'Space Grotesk',system-ui,sans-serif;line-height:1.1;margin:0}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+#bg{position:fixed;inset:0;z-index:0;pointer-events:none}
+#glow{position:fixed;width:420px;height:420px;border-radius:50%;background:radial-gradient(var(--glow),transparent 70%);pointer-events:none;z-index:0;transform:translate(-50%,-50%);left:50%;top:30%}
+#bar{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:20}
+main,nav,footer{position:relative;z-index:1}
+.wrap{max-width:1040px;margin:0 auto;padding:0 1.5rem}
+nav{position:sticky;top:0;z-index:10;padding-top:env(safe-area-inset-top,0px);background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:58px;gap:1rem}
+nav b{font-family:'Space Grotesk',sans-serif;white-space:nowrap}
+nav ul{display:flex;gap:.3rem;list-style:none;margin:0;padding:0;overflow-x:auto}
+nav li a{display:block;padding:.35rem .8rem;border-radius:99px;text-decoration:none;color:var(--muted);font-size:.9rem;transition:.2s}
+nav li a:hover,nav li a.on{color:var(--text);background:var(--glow)}
+.tgl{background:none;border:1px solid var(--line);color:var(--text);width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:1rem}
+section{padding:5rem 0 1rem}
+h2{font-size:2rem;margin-bottom:1.8rem}
+.hero{min-height:88vh;display:flex;align-items:center;padding:3rem 0}
+.hero h1{font-size:clamp(2.8rem,10vw,6.4rem);letter-spacing:-.035em}
+.hero h1 span{display:inline-block;transition:transform .25s,color .25s}
+.hero h1 span:hover{transform:translateY(-8px) rotate(-4deg);color:var(--hot)!important}
+.role{font:500 clamp(1.1rem,3vw,1.6rem) 'Space Grotesk',sans-serif;color:var(--accent);margin:1.2rem 0 1rem;min-height:1.7em}
+.role::after{content:"|";margin-left:2px;animation:blink 1s steps(2) infinite}
+@keyframes blink{50%{opacity:0}}
+.hero p{max-width:54ch;color:var(--muted)}
+.icons{display:flex;gap:.8rem;margin-top:1.8rem;flex-wrap:wrap}
+.ic{position:relative;width:52px;height:52px;border-radius:14px;border:1px solid var(--line);background:var(--surface);display:grid;place-items:center;color:var(--text);transition:.25s;cursor:pointer;text-decoration:none}
+.ic svg{width:24px;height:24px}
+.ic:hover{transform:translateY(-5px);color:var(--bg);background:var(--accent);border-color:var(--accent);box-shadow:0 10px 24px var(--glow)}
+.ic::after{content:attr(data-tip);position:absolute;bottom:-30px;left:50%;transform:translateX(-50%);font-size:.72rem;white-space:nowrap;color:var(--muted);opacity:0;transition:.2s;pointer-events:none}
+.ic:hover::after{opacity:1}
+.btns{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2.4rem}
+.btn{padding:.75rem 1.4rem;border-radius:10px;border:1px solid var(--line);text-decoration:none;font-weight:500;background:none;color:var(--text);cursor:pointer;font:inherit;transition:.2s}
+.btn.main{background:var(--accent);color:#080a1a;border-color:var(--accent)}
+.btn:hover{transform:translateY(-2px);border-color:var(--accent)}
+.rail{position:fixed;left:18px;bottom:0;display:flex;flex-direction:column;gap:.6rem;align-items:center;z-index:5}
+.rail .ic{width:40px;height:40px;border-radius:10px}.rail .ic svg{width:18px;height:18px}
+.rail::after{content:"";width:1px;height:70px;background:var(--line)}
+.rail .ic::after{display:none}
+@media(max-width:1180px){.rail{display:none}}
+.stats{display:flex;flex-wrap:wrap;gap:2.5rem;margin-top:2.2rem}
+.stats b{display:block;font:700 2.3rem 'Space Grotesk',sans-serif;color:var(--accent)}
+.stats span{color:var(--muted);font-size:.9rem}
+.about p{max-width:64ch;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem}
+.chip{padding:.45rem .9rem;border:1px solid var(--line);border-radius:99px;background:var(--surface);font-size:.9rem;transition:.2s;cursor:default}
+.chip:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
+.grp{margin-bottom:1.4rem}.grp h3{font-size:1rem;color:var(--muted);margin-bottom:.7rem;font-weight:500}
+.filters{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.5rem}
+.filters button{padding:.4rem 1rem;border-radius:99px;border:1px solid var(--line);background:none;color:var(--muted);cursor:pointer;font:inherit;transition:.2s}
+.filters button.on,.filters button:hover{background:var(--accent);color:#080a1a;border-color:var(--accent)}
+.grid{display:grid;gap:1.1rem;grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.5rem;transform:perspective(800px) rotateX(var(--rx,0)) rotateY(var(--ry,0));transition:transform .15s,border-color .2s,opacity .3s}
+.card:hover{border-color:var(--accent)}
+.card.hide{display:none}
+.card h3{font-size:1.25rem;margin-bottom:.3rem}
+.date{color:var(--accent2);font-size:.85rem}
+.card ul{padding-left:1.1rem;color:var(--muted);font-size:.93rem;margin:.9rem 0}
+.card .more{display:none}.card.open .more{display:list-item}
+.card .tog{background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;margin-bottom:.6rem}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem}
+.tags span{font-size:.76rem;padding:.2rem .6rem;border:1px solid var(--line);border-radius:99px;color:var(--muted)}
+.cols{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.cols h3{font-size:1.1rem;margin:0 0 .5rem}
+.list{list-style:none;padding:0;margin:0 0 1.6rem}
+.list li{display:flex;justify-content:space-between;gap:1rem;padding:.75rem 0;border-bottom:1px solid var(--line)}
+.list small{color:var(--muted);white-space:nowrap}
+.cwrap{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));align-items:start}
+form{display:grid;gap:.8rem;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.5rem}
+input,textarea{width:100%;padding:.8rem 1rem;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--text);font:inherit}
+input:focus,textarea:focus{outline:2px solid var(--accent);border-color:transparent}
+.cinfo p{color:var(--muted);max-width:40ch}
+.cinfo .icons{margin-bottom:2.5rem}
+.line{display:flex;align-items:center;gap:.7rem;color:var(--muted);margin-top:.5rem}
+.line a{color:var(--text)}
+footer{border-top:1px solid var(--line);padding:1.5rem;margin-top:4rem;text-align:center;color:var(--muted);font-size:.85rem}
+#toast{position:fixed;bottom:calc(24px + env(safe-area-inset-bottom,0px));left:50%;transform:translate(-50%,40px);background:var(--accent);color:#080a1a;padding:.6rem 1.2rem;border-radius:10px;opacity:0;transition:.3s;z-index:30;font-weight:500}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+.rv{opacity:0;transform:translateY(18px);transition:.6s}.rv.in{opacity:1;transform:none}
+@media(max-width:640px){nav b{display:none}.list li{flex-direction:column;gap:.2rem}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto}.rv{opacity:1;transform:none}}
+
+.card{background:var(--surface);backdrop-filter:blur(8px);border:1px solid var(--line);position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;inset:0 0 auto 0;height:4px;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+.card:nth-child(2)::before{background:linear-gradient(90deg,var(--hot),var(--accent))}
+.card:nth-child(3)::before{background:linear-gradient(90deg,var(--accent2),var(--accent))}
+.card:nth-child(4)::before{background:linear-gradient(90deg,var(--accent2),var(--hot))}
+.card:hover{border-color:var(--accent);box-shadow:0 18px 40px var(--glow)}
+.date{color:var(--hot);font-weight:500}
+.ghb{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem 1rem;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#080a1a;font-weight:500;text-decoration:none;margin:.2rem 0 1rem;transition:.2s}
+.ghb:hover{transform:translateY(-2px);box-shadow:0 8px 20px var(--glow)}.ghb.off{background:none;border:1px dashed var(--line);color:var(--muted)}
+.cert{color:var(--accent2);font-size:.85rem;text-decoration:none;font-weight:500}.cert:hover{text-decoration:underline}
+h2{background:linear-gradient(90deg,var(--text),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block}
+.btn.main,.filters button.on,.filters button:hover{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#080a1a;border-color:transparent}
+.ic:hover{background:linear-gradient(135deg,var(--accent),var(--hot));border-color:transparent;color:#fff}
+.stats b{background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.stats>div{padding:1rem 1.4rem;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+.chip{background:var(--surface)}.chip:hover{color:var(--accent2);border-color:var(--accent2)}
+.grp:nth-of-type(2n) .chip:hover{color:var(--hot);border-color:var(--hot)}
+form,.list li{backdrop-filter:blur(6px)}
+#bar{background:linear-gradient(90deg,var(--accent),var(--accent2),var(--hot))}
+.role{color:var(--accent2)}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="m3 7 9 6.5L21 7"/></symbol>
+<symbol id="in" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></symbol>
+<symbol id="gh" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.18 1.83 1.18 3.09 0 4.42-2.7 5.4-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></symbol>
+<symbol id="ph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+</svg>
+<canvas id="bg"></canvas><div id="glow"></div><div id="bar"></div><div id="toast" role="status"></div>
+
+<nav><div class="wrap"><b>Yash Raj Singh</b>
+<ul id="menu"><li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#projects">Projects</a></li><li><a href="#more">Journey</a></li><li><a href="#contact">Contact</a></li></ul>
+<button class="tgl" id="tgl" aria-label="Toggle light and dark theme">◐</button></div></nav>
+
+<div class="rail" aria-label="Social links">
+<a class="ic" href="mailto:yashthesingh2005@gmail.com" aria-label="Email"><svg><use href="#mail"/></svg></a>
+<a class="ic" href="https://www.linkedin.com/in/yash-raj-singh11/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg><use href="#in"/></svg></a>
+<a class="ic" href="https://github.com/YashSingh1108" target="_blank" rel="noopener" aria-label="GitHub"><svg><use href="#gh"/></svg></a></div>
+
+<main>
+<header class="hero" id="home"><div class="wrap">
+<h1 id="name" aria-label="Yash Raj Singh">Yash Raj Singh</h1>
+<div class="role" id="role"></div>
+<p>Computer Science student at Lovely Professional University. I build cloud-hosted apps, AI-powered tools and interactive visualizers.</p>
+<div class="icons">
+<a class="ic" data-tip="Email" href="mailto:yashthesingh2005@gmail.com" aria-label="Email Yash"><svg><use href="#mail"/></svg></a>
+<a class="ic" data-tip="LinkedIn" href="https://www.linkedin.com/in/yash-raj-singh11/" target="_blank" rel="noopener" aria-label="LinkedIn profile"><svg><use href="#in"/></svg></a>
+<a class="ic" data-tip="GitHub" href="https://github.com/YashSingh1108" target="_blank" rel="noopener" aria-label="GitHub profile"><svg><use href="#gh"/></svg></a>
+<a class="ic" data-tip="Call" href="tel:+918210199356" aria-label="Call Yash"><svg><use href="#ph"/></svg></a></div>
+<div class="btns"><a class="btn main" href="#projects">View projects</a><a class="btn" href="#contact">Contact me</a></div>
+</div></header>
+
+<section id="about" class="about rv"><div class="wrap">
+<h2>About me</h2>
+<p>I'm pursuing a B.Tech in Computer Science and Engineering at Lovely Professional University, Punjab. I like projects where I can see a result: a site running on AWS, a mortgage planner that answers in seconds, a visualizer that makes garbage collection easy to follow, or a vacuum that drives itself. I'm also Chief Finance Officer of Inferno, a student organization that runs hackathons.</p>
+<div class="stats"><div><b data-n="4">0</b><span>Projects built</span></div><div><b data-n="4" data-s="+">0</b><span>Hackathons conducted</span></div><div><b data-n="2500" data-s="+">0</b><span>Participants reached</span></div><div><b data-n="6">0</b><span>AWS services secured</span></div></div>
+</div></section>
+
+<section id="skills" class="rv"><div class="wrap">
+<h2>Skills</h2>
+<div class="grp"><h3>Languages</h3><div class="chips"><span class="chip">C</span><span class="chip">C++</span><span class="chip">Java</span><span class="chip">Python</span><span class="chip">DSA</span></div></div>
+<div class="grp"><h3>Cloud</h3><div class="chips"><span class="chip">AWS EC2</span><span class="chip">RDS</span><span class="chip">S3</span><span class="chip">CloudFront</span><span class="chip">IAM</span><span class="chip">VPC</span></div></div>
+<div class="grp"><h3>Web</h3><div class="chips"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip">React</span><span class="chip">Tailwind CSS</span><span class="chip">D3.js</span><span class="chip">Node.js</span><span class="chip">PHP</span></div></div>
+<div class="grp"><h3>Databases</h3><div class="chips"><span class="chip">MySQL</span><span class="chip">MongoDB</span><span class="chip">PostgreSQL (Prisma)</span><span class="chip">Firebase/Firestore</span></div></div>
+<div class="grp"><h3>Soft skills</h3><div class="chips"><span class="chip">Problem-solving</span><span class="chip">Team collaboration</span><span class="chip">Adaptability</span><span class="chip">Continuous learning</span></div></div>
+</div></section>
+
+<section id="projects" class="rv"><div class="wrap">
+<h2>Projects</h2>
+<div class="filters" id="filters"><button class="on" data-f="all">All</button><button data-f="cloud">Cloud</button><button data-f="ai">AI</button><button data-f="web">Web</button><button data-f="embedded">Embedded</button></div>
+<div class="grid" id="grid"></div>
+</div></section>
+
+<section id="more" class="rv"><div class="wrap">
+<h2>Journey</h2>
+<div class="cols">
+<div><h3>Education</h3><ul class="list">
+<li><span>B.Tech CSE, Lovely Professional University<br><small>CGPA 7.02</small></span><small>2024 – Present</small></li>
+<li><span>Intermediate, Vidya Bharti Chinmaya Vidyalaya<br><small>65.4%</small></span><small>2023 – 2024</small></li>
+<li><span>Matriculation, Vidya Bharti Chinmaya Vidyalaya<br><small>72.8%</small></span><small>2021 – 2022</small></li></ul>
+<h3>Achievements</h3><ul class="list">
+<li><span>"Excellence in Event Impact" award</span><small>Apr 2026</small></li>
+<li><span>Conducted 4+ hackathons under Inferno, 2,500+ participants</span><small>Nov 2025</small></li>
+<li><span>Chief Finance Officer, Inferno (LPU)</span><small>May 2025</small></li></ul></div>
+<div><h3>Training</h3><ul class="list"><li><span>UI/UX Design and Prototyping for Web and Mobile, LPU<br><a class="cert" href="https://drive.google.com/file/d/14ugOE9tE8YuvW75YC-DUmyKcMEZi8sGA/view?usp=sharing" target="_blank" rel="noopener">View certificate ↗</a></span><small>Jun – Jul 2026</small></li></ul>
+<h3>Certifications</h3><ul class="list">
+<li><span>Database Management System Part 1, Infosys Springboard<br><a class="cert" href="https://drive.google.com/file/d/1oaSTFl63ITyIqQ90Brr3JPJOR6XgXEFR/view?usp=sharing" target="_blank" rel="noopener">View certificate ↗</a></span><small>Jul 2026</small></li>
+<li><span>Gen AI-101 Future Skills Prime, MeitY-NASSCOM<br><a class="cert" href="https://drive.google.com/file/d/1oHJqA6kHAhIGYJHX17g0oGXS2cjVSgZ0/view?usp=sharing" target="_blank" rel="noopener">View certificate ↗</a></span><small>May 2026</small></li>
+<li><span>Programming Using C++, Neocolab<br><a class="cert" href="https://drive.google.com/file/d/1no_hOJmFNruqN6pY_m-60JTUW2gwyDwe/view?usp=sharing" target="_blank" rel="noopener">View certificate ↗</a></span><small>Aug 2025</small></li>
+<li><span>Programming Using C, Neocolab<br><a class="cert" href="https://drive.google.com/file/d/1sRRFCbqUpEBvKkHSx-qYDBBW6NYfQknk/view?usp=sharing" target="_blank" rel="noopener">View certificate ↗</a></span><small>Jan 2025</small></li></ul></div>
+</div></div></section>
+
+<section id="contact" class="rv"><div class="wrap">
+<h2>Get in touch</h2>
+<div class="cwrap">
+<div class="cinfo"><p>Open to internships and projects in cloud, web and AI. Send a message or use the links below.</p>
+<div class="icons">
+<a class="ic" data-tip="Email" href="mailto:yashthesingh2005@gmail.com" aria-label="Email Yash"><svg><use href="#mail"/></svg></a>
+<a class="ic" data-tip="LinkedIn" href="https://www.linkedin.com/in/yash-raj-singh11/" target="_blank" rel="noopener" aria-label="LinkedIn profile"><svg><use href="#in"/></svg></a>
+<a class="ic" data-tip="GitHub" href="https://github.com/YashSingh1108" target="_blank" rel="noopener" aria-label="GitHub profile"><svg><use href="#gh"/></svg></a>
+<a class="ic" data-tip="Call" href="tel:+918210199356" aria-label="Call Yash"><svg><use href="#ph"/></svg></a></div>
+<div class="line"><svg width="18" height="18"><use href="#mail"/></svg><a href="mailto:yashthesingh2005@gmail.com">yashthesingh2005@gmail.com</a> <button class="btn" id="copy" style="padding:.2rem .7rem;font-size:.8rem">Copy</button></div>
+<div class="line"><svg width="18" height="18"><use href="#ph"/></svg><a href="tel:+918210199356">+91 82101 99356</a></div></div>
+<form id="form"><input id="fn" placeholder="Your name" required aria-label="Your name"><input id="fe" type="email" placeholder="Your email" required aria-label="Your email"><textarea id="fm" rows="5" placeholder="Your message" required aria-label="Your message"></textarea><button class="btn main" type="submit">Send message</button></form>
+</div></div></section>
+</main>
+<footer>© 2026 Yash Raj Singh</footer>
+
+<script>
+var $=function(s){return document.querySelector(s)},reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function toast(t){var e=$('#toast');e.textContent=t;e.classList.add('show');setTimeout(function(){e.classList.remove('show')},2200)}
+/* name letters */
+var nm=$('#name');nm.innerHTML=nm.textContent.split('').map(function(c,i){return c===' '?' ':'<span aria-hidden="true" style="color:color-mix(in srgb,var(--accent) '+Math.round(100-i*7)+'%,var(--accent2))">'+c+'</span>'}).join('');
+/* typing */
+var roles=['CSE Student','Cloud & AWS Builder','Web Developer','AI App Builder'],ri=0,ci=0,del=false,rl=$('#role');
+function type(){var w=roles[ri];rl.textContent=w.slice(0,ci);
+if(reduce){rl.textContent=w;return}
+if(!del&&ci<w.length){ci++;setTimeout(type,80)}else if(!del){del=true;setTimeout(type,1400)}else if(ci>0){ci--;setTimeout(type,40)}else{del=false;ri=(ri+1)%roles.length;setTimeout(type,300)}}
+type();
+/* projects */
+var P=[
+{u:'https://github.com/YashSingh1108/Lost-and-Found-Portal-Using-AWS-Services',t:'Lost and Found Portal',d:'May 2026',c:'cloud',s:['Cloud portal to post, browse and manage lost and found items.','Runs on AWS EC2 with Apache and PHP; item and contact details live in Amazon RDS (MySQL).','Images served through S3 and CloudFront for secure, low-latency delivery.','IAM permissions and VPC networking control access and secure 6 AWS services.'],g:['AWS EC2','RDS','S3','CloudFront','IAM','VPC']},
+{u:'https://github.com/YashSingh1108/MortagageAI',t:'AI Mortgage Planner',d:'Apr 2026',c:'ai web',s:['Helps users estimate payments and plan home financing.','Node.js backend calls an LLM API for personalized mortgage insights.','MongoDB stores preferences, mortgage details and generated plans.','Saved data is ready for future sessions; estimates take under 30 seconds.'],g:['HTML','CSS','JS','Node.js','MongoDB','LLM API']},
+{u:'https://github.com/YashSingh1108/gc-visualizer',t:'Garbage Collection Visualizer',d:'Apr 2026',c:'web',s:['Shows heap memory, references and reachable objects in real time.','Simulates Mark and Sweep, Reference Counting and Copying collectors.','Create objects, switch algorithms, track memory use and watch animated collection.','Interactive heap graphs show how unused objects are found and removed.'],g:['React','Tailwind CSS','D3.js','JavaScript']},
+{u:'',t:'Arduino Smart Vacuum Cleaner',d:'Nov 2024',c:'embedded',s:['Self-driving vacuum with a built-in mopper for autonomous floor cleaning.','Fall detection and ultrasonic sensors give about 95% obstacle avoidance success.','Voice and mobile app control across 3 modes.','Motor control logic in embedded C++ coordinates navigation, cleaning and mopping.'],g:['Arduino','C++','Embedded Systems']}];
+var gr=$('#grid');
+P.forEach(function(p){var a=document.createElement('article');a.className='card';a.dataset.c=p.c;
+a.innerHTML='<h3>'+p.t+'</h3><div class="date">'+p.d+'</div><ul>'+p.s.map(function(x,i){return '<li'+(i>1?' class="more"':'')+'>'+x+'</li>'}).join('')+'</ul><button class="tog">Show more</button>'+(p.u?'<a class="ghb" href="'+p.u+'" target="_blank" rel="noopener"><svg width="16" height="16"><use href="#gh"/></svg>View on GitHub</a>':'<span class="ghb off">Hardware build</span>')+'<div class="tags">'+p.g.map(function(x){return '<span>'+x+'</span>'}).join('')+'</div>';
+a.querySelector('.tog').onclick=function(e){a.classList.toggle('open');e.target.textContent=a.classList.contains('open')?'Show less':'Show more'};
+if(!reduce){a.onmousemove=function(e){var r=a.getBoundingClientRect();a.style.setProperty('--ry',((e.clientX-r.left)/r.width-.5)*7+'deg');a.style.setProperty('--rx',-((e.clientY-r.top)/r.height-.5)*7+'deg')};a.onmouseleave=function(){a.style.setProperty('--rx','0deg');a.style.setProperty('--ry','0deg')}}
+gr.appendChild(a)});
+$('#filters').onclick=function(e){var f=e.target.dataset.f;if(!f)return;[].forEach.call(this.children,function(b){b.classList.toggle('on',b===e.target)});[].forEach.call(gr.children,function(c){c.classList.toggle('hide',f!=='all'&&c.dataset.c.indexOf(f)<0)})};
+/* reveal + counters + nav highlight */
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;e.target.classList.add('in');e.target.querySelectorAll('[data-n]').forEach(count);io.unobserve(e.target)})},{threshold:.15});
+document.querySelectorAll('.rv').forEach(function(s){io.observe(s)});
+function count(el){var n=+el.dataset.n,s=el.dataset.s||'',t=0;if(reduce){el.textContent=n+s;return}var iv=setInterval(function(){t+=Math.ceil(n/40);if(t>=n){t=n;clearInterval(iv)}el.textContent=t.toLocaleString()+(t===n?s:'')},30)}
+var links=document.querySelectorAll('#menu a'),secs=['home','about','skills','projects','more','contact'].map(function(i){return document.getElementById(i)});
+addEventListener('scroll',function(){var h=document.documentElement,y=h.scrollTop;$('#bar').style.width=(y/(h.scrollHeight-h.clientHeight)*100)+'%';var cur=0;secs.forEach(function(s,i){if(s.offsetTop-120<=y)cur=i});links.forEach(function(l,i){l.classList.toggle('on',i===cur)})},{passive:true});
+/* glow follows cursor */
+addEventListener('mousemove',function(e){var g=$('#glow');g.style.left=e.clientX+'px';g.style.top=e.clientY+'px'});
+/* theme */
+$('#tgl').onclick=function(){var d=document.documentElement,light=getComputedStyle(d).getPropertyValue('--bg').trim()==='#f7f5ff';d.dataset.theme=light?'dark':'light';draw.col=null};
+/* contact */
+$('#copy').onclick=function(){var m='yashthesingh2005@gmail.com';(navigator.clipboard?navigator.clipboard.writeText(m):Promise.reject()).then(function(){toast('Email copied')},function(){toast(m)})};
+$('#form').onsubmit=function(e){e.preventDefault();var b='Hi Yash,\n\n'+$('#fm').value+'\n\nFrom: '+$('#fn').value+' ('+$('#fe').value+')';location.href='mailto:yashthesingh2005@gmail.com?subject='+encodeURIComponent('Portfolio message from '+$('#fn').value)+'&body='+encodeURIComponent(b);toast('Opening your email app...')};
+/* particle network */
+var cv=$('#bg'),cx=cv.getContext('2d'),pts=[],mx=-999,my=-999;
+function size(){cv.width=innerWidth;cv.height=innerHeight;pts=[];var n=Math.min(70,Math.floor(innerWidth/18));for(var i=0;i<n;i++)pts.push({x:Math.random()*cv.width,y:Math.random()*cv.height,vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4})}
+addEventListener('resize',size);addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY});size();
+function draw(){cx.clearRect(0,0,cv.width,cv.height);var c=getComputedStyle(document.documentElement).getPropertyValue('--accent').trim()||'#7c9cff';cx.fillStyle=c;cx.strokeStyle=c;
+pts.forEach(function(p,i){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>cv.width)p.vx*=-1;if(p.y<0||p.y>cv.height)p.vy*=-1;cx.globalAlpha=.5;cx.beginPath();cx.arc(p.x,p.y,1.6,0,6.3);cx.fill();
+for(var j=i+1;j<pts.length;j++){var q=pts[j],d=Math.hypot(p.x-q.x,p.y-q.y);if(d<120){cx.globalAlpha=.16*(1-d/120);cx.beginPath();cx.moveTo(p.x,p.y);cx.lineTo(q.x,q.y);cx.stroke()}}
+var dm=Math.hypot(p.x-mx,p.y-my);if(dm<160){cx.globalAlpha=.3*(1-dm/160);cx.beginPath();cx.moveTo(p.x,p.y);cx.lineTo(mx,my);cx.stroke()}});
+requestAnimationFrame(draw)}
+if(!reduce)draw();
+</script>
+</body>
+</html>
